@@ -1,4 +1,6 @@
 # using python 3
+import datetime
+import time
 import socket
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -39,6 +41,7 @@ def index():
     changed = False
 
     if form.validate_on_submit():
+        comment = "[" + datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S') + "] " + comment
         comments.insert(0, comment)
         changed = True
         form.comment.data = ""
@@ -56,5 +59,5 @@ def index():
 if __name__ == '__main__':
     print("Make connections to: " + socket.gethostbyname(socket.gethostname()))
     print("Port: 5000")
-    app.run(debug=True)
-    # app.run(debug=True, host='0.0.0.0')
+    # app.run(debug=True)
+    app.run(host='0.0.0.0')
