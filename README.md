@@ -1,6 +1,8 @@
 ## Anonymous classroom commenter
 Allows students to anonymously ask questions, and instructors to dynamically put up course information throughout lecture
 
+![Alt text](Resources/screenshot.png?raw=true "Screenshot")
+
 ### Usage instructions for 2DM3 TAs
 1. Clone repository
 2. Update Theorems.txt with relevant theorems for the class

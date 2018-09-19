@@ -39,7 +39,7 @@ def index():
     changed = False
 
     if form.validate_on_submit():
-        comments.append(comment)
+        comments.insert(0, comment)
         changed = True
         form.comment.data = ""
 
