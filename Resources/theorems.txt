@@ -1,0 +1,6 @@
+Axiom (3.1) “Associativity of ≡”: ((p ≡ q) ≡ r) ≡ (p ≡ (q ≡ r))
+Axiom (3.2) “Symmetry of ≡”: (p ≡ q) ≡ (q ≡ p)
+Axiom (3.3) “Identity of ≡”: true ≡ q ≡ q
+Axiom (3.8) “Definition of `false`”: false ≡ ¬ true
+Axiom (3.9) “Distributivity of ¬ over ≡” “Mutual associativity of ¬ with ≡”:  ¬(p ≡ q) ≡ ¬ p ≡ q
+Theorem (3.14): (p ≢ q) ≡ ¬ p ≡ q

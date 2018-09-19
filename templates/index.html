@@ -1,0 +1,48 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+
+{% block title %}
+{{ class_name }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1>{{ class_name }}</h1>
+      <p class="space-above">
+        Name: {{ ta_name }}
+        <br>
+        Email: {{ ta_email }}
+      </p>
+
+      {{ wtf.quick_form(form) }}
+
+      <p class="space-above">
+        {% for comment in comments %}
+          {{ comment }}<br>
+        {% endfor %}
+      </p>
+
+      <p class="space-above">
+        <h3>{{ info_header }}</h3>
+      </p>
+      <p class="space-above">
+          {% for datum in info_data %}
+            {{ datum }}<br>
+          {% endfor %}
+      </p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
